@@ -11,8 +11,8 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
-import { Button } from "@/components/ui/button"
+} from "./ui/navigation-menu"
+import { Button } from "./ui/button"
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -96,10 +96,10 @@ const Header: React.FC = () => {
             </NavigationMenu>
           </div>
 
-          <div className="hidden md:flex items-center space-x-4">
+          {/* <div className="hidden md:flex items-center space-x-4">
             <Button variant="outline">Log In</Button>
             <Button>Sign Up</Button>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <button className="md:hidden p-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -116,7 +116,7 @@ const Header: React.FC = () => {
               exit={{ opacity: 0, height: 0 }}
               className="md:hidden mt-4"
             >
-              <nav className="flex flex-col space-y-4">
+              {/* <nav className="flex flex-col space-y-4">
                 {navigationItems.map((item) => (
                   <a
                     key={item.href}
@@ -133,7 +133,7 @@ const Header: React.FC = () => {
                   </Button>
                   <Button className="w-full">Sign Up</Button>
                 </div>
-              </nav>
+              </nav> */}
             </motion.div>
           )}
         </AnimatePresence>

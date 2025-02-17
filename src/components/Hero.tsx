@@ -1,13 +1,13 @@
 import type React from "react"
 import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
+import { Button } from "./ui/button"
 
 const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/90 to-pink-900/90" />
-        <img src="/placeholder.svg?height=1080&width=1920" alt="Background" className="w-full h-full object-cover" />
+        {/* <img src="/placeholder.svg?height=1080&width=1920" alt="Background" className="w-full h-full object-cover" /> */}
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
