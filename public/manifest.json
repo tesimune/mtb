@@ -1,0 +1,33 @@
+{
+    "short_name": "Mommy to Be",
+    "name": "Mommy to Be - Your Pregnancy Companion",
+    "icons": [
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mtb%20trans-cy74Ab16q8jV7BJM56sNn481UgRzus.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mtb%20trans-cy74Ab16q8jV7BJM56sNn481UgRzus.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#E11D48",
+    "background_color": "#ffffff",
+    "orientation": "portrait",
+    "description": "Your ultimate pregnancy companion app",
+    "screenshots": [
+      {
+        "src": "/screenshot1.png",
+        "type": "image/png",
+        "sizes": "540x720"
+      }
+    ]
+  }
+  
+  
