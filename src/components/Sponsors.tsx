@@ -4,22 +4,22 @@ import { motion } from "framer-motion"
 const sponsors = [
   {
     name: "NYSC Secretariat",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Untitled%20(3%20x%201%20in)%20(1)-QVvBzZiNombGQuYwggId9mSjOYzSkl.png",
+    logo: "/images/1.png",
     description: "Supporting maternal health initiatives",
   },
   {
     name: "Bingham University Teaching Hospital",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Untitled%20(3%20x%201%20in)%20(1)-QVvBzZiNombGQuYwggId9mSjOYzSkl.png",
+    logo: "/images/3.png",
     description: "Expert medical care partner",
   },
   {
     name: "Love & Lactation",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ll%20trans-fUfRd3ldFOVw2cGqeLTRgHU39jMtc7.png",
+    logo: "/images/mtb-black.png",
     description: "Breastfeeding support and education",
   },
   {
     name: "Digital Health Initiative",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Untitled%20(3%20x%201%20in)%20(1)-QVvBzZiNombGQuYwggId9mSjOYzSkl.png",
+    logo: "/images/2.png",
     description: "Technology partner",
   },
 ]
@@ -59,8 +59,8 @@ const Sponsors: React.FC = () => {
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">{sponsor.name}</h3>
-              <p className="text-gray-600 text-sm">{sponsor.description}</p>
+              {/* <h3 className="text-lg font-semibold text-gray-800 mb-2">{sponsor.name}</h3>
+              <p className="text-gray-600 text-sm">{sponsor.description}</p> */}
             </motion.div>
           ))}
         </div>

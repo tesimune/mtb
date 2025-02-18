@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
     <section className="relative min-h-screen flex items-center">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/90 to-pink-900/90" />
-        {/* <img src="/placeholder.svg?height=1080&width=1920" alt="Background" className="w-full h-full object-cover" /> */}
+        <img src="/images/mtb-white.png?height=1080&width=1920" alt="Background" className="w-full h-full object-cover" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
             className="hidden md:block"
           >
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mtb%20trans-cy74Ab16q8jV7BJM56sNn481UgRzus.png"
+              src="/images/mtb-white.png"
               alt="Mommy to Be Logo"
               className="w-full max-w-md mx-auto"
             />

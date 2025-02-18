@@ -16,7 +16,7 @@ const Emergency: React.FC = () => {
           >
             <FaPhone className="text-5xl text-red-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2">Emergency Hotline</h3>
-            <p className="text-gray-600 mb-4">24/7 support for urgent pregnancy-related issues</p>
+            <p className="text-gray-600 mb-4 text-sm">24/7 support for urgent pregnancy-related issues</p>
             <a
               href="tel:911"
               className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300"
@@ -32,7 +32,7 @@ const Emergency: React.FC = () => {
           >
             <FaAmbulance className="text-5xl text-red-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2">Ambulance Service</h3>
-            <p className="text-gray-600 mb-4">Quick response for medical emergencies</p>
+            <p className="text-gray-600 mb-4 text-sm">Quick response for medical emergencies</p>
             <a
               href="tel:911"
               className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300"
@@ -48,7 +48,7 @@ const Emergency: React.FC = () => {
           >
             <FaHospital className="text-5xl text-red-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2">Nearby Hospitals</h3>
-            <p className="text-gray-600 mb-4">Find the closest maternity hospitals</p>
+            <p className="text-gray-600 mb-4 text-sm">Find the closest maternity hospitals</p>
             <button className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300">
               View Map
             </button>

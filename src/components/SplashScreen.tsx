@@ -27,7 +27,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onFinish }) => {
         className="text-center"
       >
         <img
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mtb%20trans-cy74Ab16q8jV7BJM56sNn481UgRzus.png"
+          src="/images/mtb-white.png"
           alt="Mommy to Be"
           className="w-32 h-32 mx-auto mb-4"
         />
