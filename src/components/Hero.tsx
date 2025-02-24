@@ -1,6 +1,6 @@
 import type React from "react"
 import { motion } from "framer-motion"
-import { Button } from "./ui/button"
+// import { Button } from "./ui/button"
 
 const Hero: React.FC = () => {
   return (
@@ -17,14 +17,14 @@ const Hero: React.FC = () => {
             <p className="text-xl text-white/90 mb-8">
               Track your pregnancy, get expert advice, and connect with our community of mothers-to-be.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            {/* <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-pink-600 hover:bg-pink-700">
                 Get Started
               </Button>
               <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
                 Learn More
               </Button>
-            </div>
+            </div> */}
           </motion.div>
 
           <motion.div

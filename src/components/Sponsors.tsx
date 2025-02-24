@@ -61,7 +61,7 @@ const Sponsors: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
+{/* 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ const Sponsors: React.FC = () => {
           <button className='bg-purple-600 text-white px-6 py-2 rounded-md hover:bg-purple-700 transition duration-300'>
             Partner With Us
           </button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
