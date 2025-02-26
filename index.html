@@ -33,5 +33,41 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+          .register('/service-worker.js')
+          .then((registration) => {
+            console.log('Service Worker registered:', registration);
+
+            // Check if app is installed
+            registration.active.postMessage('CHECK_INSTALLATION');
+
+            navigator.serviceWorker.addEventListener('message', (event) => {
+              if (event.data.type === 'INSTALL_PROMPT') {
+                showInstallButton(); // Display Install button
+              }
+              if (event.data.type === 'OPEN_IN_APP') {
+                alert(
+                  'You have the app installed! Open it for a better experience.'
+                );
+              }
+            });
+          })
+          .catch((error) => {
+            console.log('Service Worker registration failed:', error);
+          });
+      }
+
+      // Function to show install button
+      function showInstallButton() {
+        const installBtn = document.createElement('button');
+        installBtn.textContent = 'Install App';
+        installBtn.addEventListener('click', () => {
+          navigator.serviceWorker.controller.postMessage('SHOW_INSTALL_PROMPT');
+        });
+        document.body.appendChild(installBtn);
+      }
+    </script>
   </body>
 </html>
