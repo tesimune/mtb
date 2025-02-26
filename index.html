@@ -48,6 +48,21 @@
                 showInstallButton(); // Display Install button
               }
               if (event.data.type === 'OPEN_IN_APP') {
+                if (Notification.permission === 'granted') {
+                  new Notification('Mommy to Be', {
+                    body: 'You have the app installed! Open it for a better experience.',
+                    icon: '/images/mtb-white-icon.png',
+                  });
+                } else if (Notification.permission !== 'denied') {
+                  Notification.requestPermission().then((permission) => {
+                    if (permission === 'granted') {
+                      new Notification('Mommy to Be', {
+                        body: 'You have the app installed! Open it for a better experience.',
+                        icon: '/images/mtb-white-icon.png',
+                      });
+                    }
+                  });
+                }
                 alert(
                   'You have the app installed! Open it for a better experience.'
                 );
