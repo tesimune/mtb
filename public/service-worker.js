@@ -45,27 +45,57 @@ self.addEventListener('beforeinstallprompt', (event) => {
   event.preventDefault();
   deferredPrompt = event;
 
-  // Check if PWA is installed
+  // Notify the app about the install prompt availability
   self.clients.matchAll().then((clients) => {
     clients.forEach((client) => {
-      client.postMessage({
-        type: 'INSTALL_PROMPT',
-      });
+      client.postMessage({ type: 'INSTALL_PROMPT' });
     });
   });
 });
 
 // Listen for Messages from the App
-self.addEventListener('message', (event) => {
+self.addEventListener('message', async (event) => {
   if (event.data === 'SHOW_INSTALL_PROMPT' && deferredPrompt) {
     deferredPrompt.prompt();
-    deferredPrompt.userChoice.then((choiceResult) => {
-      if (choiceResult.outcome === 'accepted') {
-        console.log('User accepted the install prompt');
-      } else {
-        console.log('User dismissed the install prompt');
-      }
-      deferredPrompt = null;
-    });
+    const choiceResult = await deferredPrompt.userChoice;
+
+    if (choiceResult.outcome === 'accepted') {
+      sendNotification('PWA Installed', 'You can now access the app offline.');
+      console.log('User accepted the install prompt');
+    } else {
+      sendNotification(
+        'Installation Canceled',
+        'You can install the app later from the browser menu.'
+      );
+      console.log('User dismissed the install prompt');
+    }
+
+    deferredPrompt = null;
+  }
+
+  if (event.data === 'CHECK_INSTALLATION') {
+    checkIfAppIsInstalled(event.source);
   }
 });
+
+// Function to check if app is installed
+async function checkIfAppIsInstalled(client) {
+  const isStandalone =
+    window.matchMedia('(display-mode: standalone)').matches ||
+    window.navigator.standalone;
+
+  if (isStandalone) {
+    sendNotification('App Installed', 'Continue using the installed version.');
+    client.postMessage({ type: 'OPEN_IN_APP' });
+  } else {
+    client.postMessage({ type: 'SHOW_INSTALL_PROMPT' });
+  }
+}
+
+// Function to send notifications
+function sendNotification(title, body) {
+  self.registration.showNotification(title, {
+    body,
+    icon: './images/mtb-black.png',
+  });
+}
