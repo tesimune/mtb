@@ -61,13 +61,13 @@ self.addEventListener('message', async (event) => {
 
     if (choiceResult.outcome === 'accepted') {
       sendNotification('PWA Installed', 'You can now access the app offline.');
-      console.log('User accepted the install prompt');
+      alert('You can now access the app offline.');
     } else {
       sendNotification(
         'Installation Canceled',
         'You can install the app later from the browser menu.'
       );
-      console.log('User dismissed the install prompt');
+      alert('You can install the app later from the browser menu.');
     }
 
     deferredPrompt = null;
